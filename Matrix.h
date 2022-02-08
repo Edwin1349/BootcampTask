@@ -18,10 +18,9 @@ public:
     }
 
     Matrix& operator+=(const Matrix& mat);
-
-    Matrix& operator-= (const Matrix& mat);
-
-    Matrix operator* (const Matrix& mat);
+    Matrix& operator-=(const Matrix& mat);
+    Matrix operator*(const Matrix& mat);
+    Matrix& operator*=(const double& number);
 
     double *SumRows();
     double *SumColumns();

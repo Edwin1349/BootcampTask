@@ -67,6 +67,17 @@ Matrix Matrix::operator*(const Matrix& mat){
     return res;
 }
 
+Matrix &Matrix::operator*=(const double &number){
+    std::cout << "Func: " << __FUNCTION__ << std::endl;
+
+    for(int i = 0; i < this->rows; i++){
+        for(int j = 0; j < this->columns; j++){
+             this->matrix[i][j] *= number;
+        }
+    }
+    return *this;
+}
+
 double *Matrix::SumRows(){
     std::cout << "Func: " << __FUNCTION__ << std::endl;
 

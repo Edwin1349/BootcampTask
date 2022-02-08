@@ -24,6 +24,13 @@ int main(){
         m1->PrintMatrix();
     }
 
+    //Scalar Multiplication
+    {
+        Timer timer;
+        (*m1) *= 3;
+        m1->PrintMatrix();
+    }
+
     //Sum by Columns
     {
         Timer timer;
