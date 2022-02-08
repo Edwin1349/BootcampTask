@@ -26,7 +26,7 @@ public:
     double *SumRows();
     double *SumColumns();
 
-    void Transpose();
+    Matrix Transpose();
 
     void PrintMatrix();
 

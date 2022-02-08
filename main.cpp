@@ -49,8 +49,8 @@ int main(){
     //Transpose
     {
         Timer timer;
-        m1->Transpose();
-        m1->PrintMatrix();
+        Matrix tr = m1->Transpose();
+        tr.PrintMatrix();
     }
 
     //Multiplication
@@ -62,6 +62,7 @@ int main(){
 
     delete m1;
     delete m2;
+
     getchar();
     return 0;
 }

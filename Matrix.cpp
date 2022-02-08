@@ -93,18 +93,16 @@ double *Matrix::SumColumns(){
     return res;
 }
 
-void Matrix::Transpose(){
+Matrix Matrix::Transpose(){
     std::cout << "Func: " << __FUNCTION__ << std::endl;
 
+    Matrix res(this->columns, this->rows, 0);
     for(int i = 0; i < this->rows; i++){
-        for(int j = i; j < this->columns; j++){
-            if(i != j){
-                this->matrix[i][j] = this->matrix[i][j] + this->matrix[j][i];
-                this->matrix[j][i] = this->matrix[i][j] - this->matrix[j][i];
-                this->matrix[i][j] = this->matrix[i][j] - this->matrix[j][i];
-            }
+        for(int j = 0; j < this->columns; j++){
+            res.matrix[j][i] = this->matrix[i][j];
         }
     }
+    return res;
 }
 
 void Matrix::PrintMatrix(){
